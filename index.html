@@ -15,22 +15,27 @@
     <h1>Regex converter</h1>
 
     <div class="panel left">
-        <form><textarea class="code" name="code-in">
-
-        </textarea></form>
+        <form>
+            <textarea class="code" name="code-in"></textarea>
+        </form>
     </div>
 
     <div class="panel right">
-        <form><textarea class="code" name="code-out">
-
-        </textarea></form>
+        <form>
+            <textarea class="code" name="code-out"></textarea>
+        </form>
     </div>
 
     <div class="bar">
         <div class="regex">
-            <input type="checkbox" class="check" checked>
-            <input type="text" class="in" value='<ux\-((.*) class="(.*)")'>
-            <input type="text" class="out" value='<div class="$2 $3"'>
+            <input type="checkbox" name="regex-1-enabled" class="check" checked>
+            <input type="text" name="regex-1-in" class="in" value='<ux\-((.*) class="(.*)")'>
+            <input type="text" name="regex-1-out" class="out" value='<div class="$2 $3"'>
+        </div>
+        <div class="regex">
+            <input type="checkbox" name="regex-2-enabled" class="check" checked>
+            <input type="text" name="regex-2-in" class="in" value='<ux\-((.*)>'>
+            <input type="text" name="regex-2-out" class="out" value='<div class="$2">'>
         </div>
     </div>
 

@@ -28,8 +28,9 @@ html, body {
 
     .bar {
         display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
         bottom: -1px;
-        height: 70px;
         width: 80%;
         left: 10%;
         padding: 10px;
@@ -59,6 +60,7 @@ html, body {
         display: flex;
         height: 20px;
         align-items: center;
+        margin: 5px 10px;
 
         input {
             font-family: monospace;
