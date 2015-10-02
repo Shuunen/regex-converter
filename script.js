@@ -11,9 +11,15 @@
 
 }).call(this);
 
+function setCodeEditorHeight() {
+    var panelHeight = $('.panel').first().height();
+
+    $('.CodeMirror').height(panelHeight + 'px');
+}
+
 function handleDataChanges() {
 
-    $('.check').on('change', regexConvert);
+    $('input').on('change', regexConvert);
 
 }
 
@@ -57,6 +63,14 @@ function saveRestoreDataInLocalStorage() {
      console.log("Save timer started");
      });
      */
+
+    $('.reset').click(function(){
+
+        saveInputs.phoenix('remove');
+
+        window.location.reload();
+
+    });
 }
 
 function initCodeEditors() {
@@ -70,7 +84,7 @@ function initCodeEditors() {
     });
 
     editorCodeIn.on('change', function (e) {
-        console.log('editor code-in changed', e);
+        // console.log('editor code-in changed', e);
         e.save();
     });
 
@@ -84,6 +98,8 @@ function initCodeEditors() {
     });
 
     editorCodeOut.on('change', function (e) {
-        console.log('editor code-out changed', e);
+        // console.log('editor code-out changed', e);
     });
+
+    setCodeEditorHeight();
 }

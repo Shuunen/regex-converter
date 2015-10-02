@@ -12,30 +12,54 @@
 
 <div class="container">
 
-    <h1>Regex converter</h1>
-
-    <div class="panel left">
-        <form>
-            <textarea class="code" name="code-in"></textarea>
-        </form>
+    <div class="bar top">
+        <h1>regex-converter</h1>
+        <a href="#" class="reset">reset</a>
     </div>
 
-    <div class="panel right">
-        <form>
-            <textarea class="code" name="code-out"></textarea>
-        </form>
+    <div class="content">
+        <div class="panel left">
+            <form>
+                <textarea class="code" name="code-in">
+<ux-row class="phone-view-panel">
+    <ux-row class="panel-info">
+        <ux-image-gallery selectedColor="{{selectedColor}}" imagepath="{{imagePath}}" datamodel="{{{data}}}"></ux-image-gallery>
+        <ux-col class="small-12 medium-8">
+            <div class="main-header">{{data.phoneName}}</div>
+            <div>{{{data.phoneDesc}}}</div>
+        </ux-col>
+    </ux-row>
+</ux-row></textarea>
+            </form>
+        </div>
+
+        <div class="panel right">
+            <form>
+                <textarea class="code" name="code-out"></textarea>
+            </form>
+        </div>
     </div>
 
-    <div class="bar">
+    <div class="bar bottom">
         <div class="regex">
             1 - <input type="checkbox" name="regex-1-enabled" class="check" checked>
             <input type="text" name="regex-1-in" class="in" value='<ux\-((.*) class="(.*)")'>
-            <input type="text" name="regex-1-out" class="out" value='<div class="$2 $3"'>
+            <input type="text" name="regex-1-out" class="out" value='<div class="ux-$2 $3"'>
         </div>
         <div class="regex">
             2 - <input type="checkbox" name="regex-2-enabled" class="check" checked>
-            <input type="text" name="regex-2-in" class="in" value='<ux\-(\w*)>'>
-            <input type="text" name="regex-2-out" class="out" value='<div class="$1">'>
+            <input type="text" name="regex-2-in" class="in" value='<ux\-(.*)>'>
+            <input type="text" name="regex-2-out" class="out" value='<div data-$1>'>
+        </div>
+        <div class="regex">
+            3 - <input type="checkbox" name="regex-3-enabled" class="check" checked>
+            <input type="text" name="regex-3-in" class="in" value='</ux\-(.*)>'>
+            <input type="text" name="regex-3-out" class="out" value='</div>'>
+        </div>
+        <div class="regex">
+            4 - <input type="checkbox" name="regex-4-enabled" class="check" checked>
+            <input type="text" name="regex-4-in" class="in" value='>[{]*data\.(\w+)[}]*'>
+            <input type="text" name="regex-4-out" class="out" value=' data-bind="text:$1">'>
         </div>
     </div>
 
