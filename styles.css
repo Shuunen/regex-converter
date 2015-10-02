@@ -1,0 +1,57 @@
+html, body {
+  height: 100vh;
+  margin: 0; }
+
+.container {
+  display: flex;
+  height: 100%; }
+  .container h1, .container .bar {
+    border: 1px solid grey;
+    background-color: snow;
+    font-family: monospace;
+    position: fixed;
+    z-index: 10; }
+  .container h1 {
+    margin: 0;
+    padding: 0;
+    text-transform: lowercase;
+    width: 155px;
+    line-height: 35px;
+    height: 75px;
+    text-align: center;
+    left: calc(50% - 155px / 2);
+    top: -1px; }
+  .container .bar {
+    display: flex;
+    bottom: -1px;
+    height: 70px;
+    width: 80%;
+    left: 10%;
+    padding: 10px; }
+  .container .panel {
+    display: flex;
+    flex: 1;
+    background-color: aliceblue; }
+    .container .panel + .panel {
+      background-color: seashell; }
+    .container .panel > form {
+      flex: 1;
+      margin: 20px;
+      background-color: rgba(255, 255, 255, 0.3); }
+      .container .panel > form > .CodeMirror {
+        height: calc(100vh - 40px); }
+  .container .regex {
+    display: flex;
+    height: 20px;
+    align-items: center; }
+    .container .regex input {
+      font-family: monospace; }
+    .container .regex .in, .container .regex .out {
+      width: 200px; }
+    .container .regex .check, .container .regex .in {
+      margin-right: 10px; }
+    .container .regex .check {
+      height: 16px;
+      width: 16px; }
+
+/*# sourceMappingURL=styles.css.map */

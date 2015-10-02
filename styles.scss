@@ -1,0 +1,81 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    display: flex;
+    height: 100%;
+
+    h1, .bar {
+        border: 1px solid grey;
+        background-color: snow;
+        font-family: monospace;
+        position: fixed;
+        z-index: 10;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        text-transform: lowercase;
+        width: 155px;
+        line-height: 35px;
+        height: 75px;
+        text-align: center;
+        left: calc(50% - 155px / 2);
+        top: -1px;
+    }
+
+    .bar {
+        display: flex;
+        bottom: -1px;
+        height: 70px;
+        width: 80%;
+        left: 10%;
+        padding: 10px;
+    }
+
+    .panel {
+        display: flex;
+        flex: 1;
+        background-color: aliceblue;
+
+        & + .panel {
+            background-color: seashell;
+        }
+
+        & > form {
+            flex: 1;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+
+            & > .CodeMirror {
+                height: calc(100vh - 40px);
+            }
+        }
+    }
+
+    .regex {
+        display: flex;
+        height: 20px;
+        align-items: center;
+
+        input {
+            font-family: monospace;
+        }
+
+        .in, .out {
+            width: 200px;
+        }
+
+        .check, .in {
+            margin-right: 10px;
+        }
+
+        .check {
+            height: 16px;
+            width: 16px;
+        }
+    }
+
+}

@@ -1,0 +1,10 @@
+{
+  "name": "regex-converter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "browser-sync start --server --files \"*.css, *.js, *.html\""
+  },
+  "author": "Romain Racamier",
+  "license": "GPL"
+}

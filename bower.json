@@ -1,0 +1,24 @@
+{
+  "name": "regex-converter",
+  "version": "1",
+  "homepage": "https://github.com/Shuunen/regex-converter",
+  "keywords": [
+    "regex"
+  ],
+  "authors": [
+    "Romain Racamier"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "CodeMirror": "~5.7.0",
+    "jquery": "~2.1.4",
+    "phoenix": "~1.2.3"
+  }
+}
