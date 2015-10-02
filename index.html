@@ -28,14 +28,14 @@
 
     <div class="bar">
         <div class="regex">
-            <input type="checkbox" name="regex-1-enabled" class="check" checked>
+            1 - <input type="checkbox" name="regex-1-enabled" class="check" checked>
             <input type="text" name="regex-1-in" class="in" value='<ux\-((.*) class="(.*)")'>
             <input type="text" name="regex-1-out" class="out" value='<div class="$2 $3"'>
         </div>
         <div class="regex">
-            <input type="checkbox" name="regex-2-enabled" class="check" checked>
-            <input type="text" name="regex-2-in" class="in" value='<ux\-((.*)>'>
-            <input type="text" name="regex-2-out" class="out" value='<div class="$2">'>
+            2 - <input type="checkbox" name="regex-2-enabled" class="check" checked>
+            <input type="text" name="regex-2-in" class="in" value='<ux\-(\w*)>'>
+            <input type="text" name="regex-2-out" class="out" value='<div class="$1">'>
         </div>
     </div>
 

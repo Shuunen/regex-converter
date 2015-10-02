@@ -5,8 +5,32 @@
     // this timeout allow phoenix to restore textarea code before CodeMirror init
     setTimeout(initCodeEditors, 200);
 
+    setTimeout(regexConvert, 400);
+
+    handleDataChanges();
+
 }).call(this);
 
+function handleDataChanges() {
+
+    $('.check').on('change', regexConvert);
+
+}
+
+function regexConvert() {
+
+    var str = editorCodeIn.getValue();
+
+    $('.check:checked').each(function (i, check) {
+        var regexIn = check.nextElementSibling.value;
+        var regexOut = check.nextElementSibling.nextElementSibling.value;
+        str = str.replace(new RegExp(regexIn, 'gmi'), regexOut);
+        // console.log(str);
+    });
+
+    editorCodeOut.setValue(str);
+
+}
 
 function saveRestoreDataInLocalStorage() {
 
@@ -17,37 +41,49 @@ function saveRestoreDataInLocalStorage() {
     saveInputs.phoenix();
 
     /*
-    saveInputs.bind('phnx.loaded', function (e) {
-        console.log('Data loaded... ')
-    });
+     saveInputs.bind('phnx.loaded', function (e) {
+     console.log('Data loaded... ')
+     });
 
-    saveInputs.bind('phnx.removed', function (e) {
-        console.log("Data removed");
-    });
+     saveInputs.bind('phnx.removed', function (e) {
+     console.log("Data removed");
+     });
 
-    saveInputs.bind('phnx.stopped', function (e) {
-        console.log("Save timer stopped");
-    });
+     saveInputs.bind('phnx.stopped', function (e) {
+     console.log("Save timer stopped");
+     });
 
-    saveInputs.bind('phnx.started', function (e) {
-        console.log("Save timer started");
-    });
-    */
+     saveInputs.bind('phnx.started', function (e) {
+     console.log("Save timer started");
+     });
+     */
 }
 
 function initCodeEditors() {
 
-    var els = document.getElementsByClassName('code');
+    // IN
+    window.textareaCodeIn = document.getElementsByName('code-in')[0];
 
-    for (var i = 0; i < els.length; i++) {
-        var textarea = els[i];
-        var editor = CodeMirror.fromTextArea(textarea, {
-            mode: "text/html",
-            lineNumbers: true
-        });
-        editor.on('change', function (e) {
-            console.log('editor change...', e);
-            e.save();
-        });
-    }
+    window.editorCodeIn = CodeMirror.fromTextArea(textareaCodeIn, {
+        mode: "text/html",
+        lineNumbers: true
+    });
+
+    editorCodeIn.on('change', function (e) {
+        console.log('editor code-in changed', e);
+        e.save();
+    });
+
+    // OUT
+    window.textareaCodeOut = document.getElementsByName('code-out')[0];
+
+    window.editorCodeOut = CodeMirror.fromTextArea(textareaCodeOut, {
+        mode: "text/html",
+        lineNumbers: true,
+        pollInterval: 300
+    });
+
+    editorCodeOut.on('change', function (e) {
+        console.log('editor code-out changed', e);
+    });
 }
