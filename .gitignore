@@ -1,5 +1,2 @@
 /bower_components
-.idea
-*.css
-*.css.map
-styles.css
+/node_modules
