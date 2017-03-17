@@ -1,10 +1,14 @@
 {
   "name": "regex-converter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
-    "start": "browser-sync start --server --files \"*.css, *.js, *.html\""
+    "start": "http-server -o"
   },
   "author": "Romain Racamier",
-  "license": "GPL"
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "jscs": "^3.0.7"
+  }
 }
