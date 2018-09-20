@@ -13,6 +13,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden;
 }
 
 .container .content {
@@ -27,6 +28,7 @@ h1 {
     padding: 10px;
     font-family: monospace;
     align-items: center;
+    width: 100%;
 }
 
 .bar.top {

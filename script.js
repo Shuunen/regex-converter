@@ -5,7 +5,9 @@ var regexTemplate = `
     <input type="text" name="regex-{{ num }}-out" class="out" value="out">
 </div>
 `;
-var regexNumber = 9;
+var regexNumber = 12;
+var replaceChar = ['=C3=A9', '=C3=A8', '=C3=AA', '=C3=A0', '=C3=B4', '=C3=BB', '=C3=A7', '=C3=AE', '=E2=80=99']
+var replaceWith = ['é', 'è', 'ê', 'à', 'ô', 'û', 'ç', 'î', '\'']
 
 function insertRegexFields() {
     var html = ''
@@ -16,9 +18,11 @@ function insertRegexFields() {
     $('.bar.bottom').html(html)
 }
 
-function setCodeEditorHeight() {
+function setCodeEditorSize() {
     var panelHeight = $('.panel').first().height();
+    var panelWidth = Math.round(document.body.clientWidth / 2);
     $('.CodeMirror').height(panelHeight + 'px');
+    $('.CodeMirror').width(panelWidth + 'px');
 }
 
 function handleDataChanges() {
@@ -33,6 +37,9 @@ function regexConvert() {
         str = str.replace(new RegExp(regexIn, 'gmi'), regexOut);
         // console.log(str);
     });
+    replaceChar.forEach((char, index) => {
+        str = str.replace(new RegExp(char, 'gmi'), replaceWith[index]);
+    })
     editorCodeOut.setValue(str);
 }
 
@@ -63,7 +70,7 @@ function initCodeEditors() {
         lineNumbers: true,
         pollInterval: 300
     });
-    setCodeEditorHeight();
+    setCodeEditorSize();
 }
 
 function init() {
