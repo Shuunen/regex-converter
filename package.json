@@ -9,6 +9,7 @@
   "license": "AGPL-3.0",
   "devDependencies": {
     "eslint": "^3.17.1",
+    "http-server": "^0.11.1",
     "jscs": "^3.0.7"
   }
 }

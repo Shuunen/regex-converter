@@ -2,28 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Regex converter</title>
-  <link rel="stylesheet" href="vendors/codemirror_524/codemirror.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Regex converter</title>
+    <link rel="stylesheet" href="vendors/codemirror_524/codemirror.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="bar top">
-      <h1>regex-converter</h1>
-      <a href="#" class="reset">reset</a>
-    </div>
+        <div class="bar top">
+            <h1>regex-converter</h1>
+            <a href="#" class="reset">reset</a>
+        </div>
 
-    <div class="content">
+        <div class="content">
 
-      <div class="panel left">
-        <form>
-          <textarea class="code" name="code-in">
+            <div class="panel left">
+                <form>
+                    <textarea class="code" name="code-in">
 <h1>My title</h1>
 <p>A paragraph with some text</p>
 <ul>
@@ -32,46 +32,25 @@
     <li>and stuff</li>
 </ul>
           </textarea>
-        </form>
-      </div>
+                </form>
+            </div>
 
-      <div class="panel right">
-        <form>
-          <textarea class="code" name="code-out"></textarea>
-        </form>
-      </div>
+            <div class="panel right">
+                <form>
+                    <textarea class="code" name="code-out"></textarea>
+                </form>
+            </div>
+        </div>
+
+        <div class="bar bottom"></div>
+
     </div>
 
-    <div class="bar bottom">
-      <div class="regex">
-        1 - <input type="checkbox" name="regex-1-enabled" class="check" checked>
-        <input type="text" name="regex-1-in" class="in" value="ul>">
-        <input type="text" name="regex-1-out" class="out" value="ol>">
-      </div>
-      <div class="regex">
-        2 - <input type="checkbox" name="regex-2-enabled" class="check" checked>
-        <input type="text" name="regex-2-in" class="in" value="A list">
-        <input type="text" name="regex-2-out" class="out" value="a nice list">
-      </div>
-      <div class="regex">
-        3 - <input type="checkbox" name="regex-3-enabled" class="check" checked>
-        <input type="text" name="regex-3-in" class="in" value="stuff">
-        <input type="text" name="regex-3-out" class="out" value="other stuff">
-      </div>
-      <div class="regex">
-        4 - <input type="checkbox" name="regex-4-enabled" class="check" checked>
-        <input type="text" name="regex-4-in" class="in" value="My title">
-        <input type="text" name="regex-4-out" class="out" value="Regex Converter">
-      </div>
-    </div>
-
-  </div>
-
-  <script src="vendors/jquery_214/jquery.min.js"></script>
-  <script src="vendors/jquery-phoenix_123/jquery.phoenix.min.js"></script>
-  <script src="vendors/codemirror_524/codemirror.js"></script>
-  <script src="vendors/codemirror_524/xml.js"></script>
-  <script src="script.js"></script>
+    <script src="vendors/jquery_214/jquery.min.js"></script>
+    <script src="vendors/jquery-phoenix_123/jquery.phoenix.min.js"></script>
+    <script src="vendors/codemirror_524/codemirror.js"></script>
+    <script src="vendors/codemirror_524/xml.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
