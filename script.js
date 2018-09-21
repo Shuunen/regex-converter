@@ -5,9 +5,10 @@ var regexTemplate = `
     <input type="text" name="regex-{{ num }}-out" class="out" value="out">
 </div>
 `;
-var regexNumber = 12;
-var replaceChar = ['=C3=A9', '=C3=A8', '=C3=AA', '=C3=A0', '=C3=B4', '=C3=BB', '=C3=A7', '=C3=AE', '=E2=80=99']
-var replaceWith = ['é', 'è', 'ê', 'à', 'ô', 'û', 'ç', 'î', '\'']
+var regexNumber = 14;
+var replaceChar = ['=C3=A9', '=C3=A8', '=C3=AA', '=C3=A2', '=C3=A0', '=C3=B4', '=C3=BB', '=C3=A7', '=C3=AE', '=E2=80=99']
+var replaceWith = ['é', 'è', 'ê', 'â', 'à', 'ô', 'û', 'ç', 'î', '\'']
+var turndownService = new TurndownService({ headingStyle: 'atx' })
 
 function insertRegexFields() {
     var html = ''
@@ -43,14 +44,22 @@ function regexConvert() {
     editorCodeOut.setValue(str);
 }
 
+function handleButtons() {
+    $('.markdown').click(function() {
+        var str = editorCodeOut.getValue();
+        str = turndownService.turndown(str);
+        editorCodeOut.setValue(str);
+    })
+    $('.reset').click(function() {
+        saveInputs.phoenix('remove');
+        window.location.reload();
+    })
+}
+
 function saveRestoreDataInLocalStorage() {
     var saveInputs = $('input, textarea[name="code-in"]');
     // console.info('inputs to save', saveInputs);
     saveInputs.phoenix();
-    $('.reset').click(function() {
-        saveInputs.phoenix('remove');
-        window.location.reload();
-    });
 }
 
 function initCodeEditors() {
@@ -75,6 +84,7 @@ function initCodeEditors() {
 
 function init() {
     insertRegexFields()
+    handleButtons()
     saveRestoreDataInLocalStorage();
     // this timeout allow phoenix to restore textarea code before CodeMirror init
     setTimeout(initCodeEditors, 200);
