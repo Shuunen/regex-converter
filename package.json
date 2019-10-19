@@ -1,12 +1,26 @@
 {
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
-  "description": "",
+  "description": "Web app to apply successive regex text substitutions",
+  "devDependencies": {
+    "eslint": "6.5.1",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-html": "6.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "servor": "2.2.1"
+  },
   "files": [
     "src"
   ],
   "homepage": "https://github.com/Shuunen/regex-converter",
-  "keywords": [],
+  "keywords": [
+    "successive",
+    "regex",
+    "substitution"
+  ],
   "license": "GPL-3.0",
   "name": "@shuunen/regex-converter",
   "private": true,
@@ -18,14 +32,11 @@
     "check": "npx repo-check",
     "ci": "npm run test",
     "dev": "npm start",
-    "lint": "standard **/*.js --fix",
+    "lint": "eslint \"**/*.js\" --fix --ignore-path .gitignore",
     "postversion": "git push && git push --tags",
-    "start": "",
+    "start": "servor public",
     "test": "npm run lint && npm run check",
     "update": "npx npm-check-updates -u"
   },
-  "version": "0.0.1",
-  "devDependencies": {
-    "standard": "^14.3.1"
-  }
+  "version": "0.0.1"
 }
