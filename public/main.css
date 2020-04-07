@@ -2,31 +2,24 @@ html * {
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
-  padding: 0;
   margin: 0;
   overflow: hidden;
+  padding: 0;
 }
 
 #app {
-  --success: darkseagreen;
-  --disabled: darkgrey;
-  --primary: navy;
-  --primary-contrast: white;
-  --secondary: steelblue;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png");
   font-family: sans-serif;
   font-size: 16px;
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png");
 }
 
-h1,
-h2 {
+h1, h2 {
   background-color: var(--primary-contrast);
-  margin: 0 auto;
-  padding: 0.1rem 1rem;
   line-height: 2rem;
+  margin: 0 auto;
+  padding: .1rem 1rem;
 }
 
 h1 {
@@ -43,8 +36,7 @@ h2 {
   text-align: center;
 }
 
-.row,
-.col {
+.row, .col {
   display: flex;
 }
 
@@ -101,43 +93,43 @@ h2 {
 }
 
 button.round {
-  border-radius: 100%;
-  border: none;
-  font-size: 2rem;
-  font-family: monospace;
-  width: 2.5rem;
-  line-height: 2.3rem;
-  font-weight: bold;
-  cursor: pointer;
   background-color: var(--secondary);
+  border: none;
+  border-radius: 100%;
   color: var(--primary-contrast);
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  width: 2.5rem;
 }
 
 textarea {
-  padding: 0.7rem;
+  padding: .7rem;
 }
 
 ul.rules {
-  list-style-type: decimal-leading-zero;
   display: flex;
   flex-wrap: wrap;
+  list-style-type: decimal-leading-zero;
+  max-height: 50%;
   overflow-x: hidden;
   overflow-y: visible;
-  max-height: 50%;
 }
 
 ul.rules li {
-  min-width: 300px;
   flex-grow: 1;
+  min-width: 300px;
 }
 
 .rule {
-  padding: 0.3rem 0.4rem;
-  margin-right: 2.5rem;
-  margin-bottom: 0.4rem;
-  background-color: var(--disabled);
   align-items: baseline;
+  background-color: var(--disabled);
+  margin-bottom: .4rem;
+  margin-right: 2.5rem;
   opacity: .5;
+  padding: .3rem .4rem;
   transition: opacity .3s, background-color .3s;
 }
 
@@ -147,19 +139,19 @@ ul.rules li {
 }
 
 .rule input[type="checkbox"][name="enable"] {
-  height: 1.4rem;
-  width: 1.4rem;
-  display: inline-block;
-  cursor: pointer;
-  vertical-align: middle;
   align-self: center;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.4rem;
+  vertical-align: middle;
+  width: 1.4rem;
 }
 
 .rule input[type="text"] {
   flex-grow: 1;
-  padding: 0.3rem 0.4rem;
+  padding: .3rem .4rem;
 }
-.rule input[type="checkbox"][name="enable"],
-.rule input[type="text"][name="replace-in"] {
-  margin: 0 0.3rem 0 0;
+
+.rule input[type="checkbox"][name="enable"], .rule input[type="text"][name="replace-in"] {
+  margin: 0 .3rem 0 0;
 }

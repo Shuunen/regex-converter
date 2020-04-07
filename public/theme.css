@@ -1,0 +1,7 @@
+#app {
+  --success: darkseagreen;
+  --disabled: darkgrey;
+  --primary: navy;
+  --primary-contrast: white;
+  --secondary: steelblue;
+}
