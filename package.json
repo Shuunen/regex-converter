@@ -10,6 +10,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
+    "repo-check": "1.5.0",
     "servor": "3.2.0"
   },
   "files": [
@@ -29,11 +30,12 @@
     "url": "https://github.com/Shuunen/regex-converter.git"
   },
   "scripts": {
-    "check": "npx repo-check",
+    "check": "repo-check",
     "ci": "npm run test",
     "dev": "npm start",
     "lint": "eslint --fix --ignore-path .gitignore --ext .js,.html .",
     "postversion": "git push && git push --tags",
+    "preversion": "npm run ci",
     "start": "servor public",
     "test": "npm run lint && npm run check",
     "update": "npx npm-check-updates -u"
