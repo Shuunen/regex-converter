@@ -3,7 +3,7 @@
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
-    "eslint": "7.12.0",
+    "eslint": "7.12.1",
     "eslint-config-standard": "15.0.0",
     "eslint-plugin-html": "6.1.0",
     "eslint-plugin-import": "2.22.1",
