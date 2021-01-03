@@ -17,4 +17,4 @@
 - [Netlify](https://netlify.com) : awesome company that offers free CI & hosting for OSS projects
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
-- [travis-ci.com](https://travis-ci.com) : for providing free continuous deployments
+- [Travis-ci.com](https://travis-ci.com) : for providing free continuous deployments
