@@ -13,6 +13,11 @@ html, body {
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png");
   font-family: sans-serif;
   font-size: 16px;
+  --success: darkseagreen;
+  --disabled: darkgrey;
+  --primary: navy;
+  --primary-contrast: white;
+  --secondary: steelblue;
 }
 
 h1, h2 {
