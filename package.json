@@ -30,5 +30,5 @@
     "start": "npm run dev",
     "test": "echo nothing to test"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
