@@ -13,6 +13,7 @@ class App {
     console.log('app init')
     this.nbRules = 0
     this.applyRules = debounce(() => this.applyRulesSync(), 500)
+    window.addEventListener('load', () => this.onDocumentLoad())
   }
 
   onDocumentLoad() {
@@ -21,6 +22,9 @@ class App {
     this.addRule(true, '\\.', ' 😸')
     this.addRule(true, 'right\\s', '')
     this.addRule(false, '([A-Z])', '- $1')
+    this.addRule(false, '', '')
+    this.addRule(false, '', '')
+    this.addRule(false, '', '')
   }
 
   setupElements() {
@@ -83,6 +87,5 @@ class App {
     ].join('\n')
   }
 }
-const app = new App()
-window.addEventListener('load', app.onDocumentLoad.bind(app))
-window.app = app
+
+window.app = new App()

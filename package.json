@@ -3,7 +3,6 @@
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
-    "servor": "latest",
     "shuunen-stack": "latest"
   },
   "files": [
@@ -24,13 +23,12 @@
   },
   "scripts": {
     "build": "echo nothing to build",
-    "dev": "servor public --browse --reload",
+    "dev": "stack serve public",
     "lint": "stack lint",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
     "start": "npm run dev",
-    "test": "echo nothing to test",
-    "update": "npx npm-check-updates -u"
+    "test": "echo nothing to test"
   },
   "version": "0.1.0"
 }

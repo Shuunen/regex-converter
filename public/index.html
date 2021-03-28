@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div id="app" class="col c p pt h100">
+  <div id="app" class="col center p pt h100">
     <h1>Regex Converter</h1>
     <div class="row h50">
       <div class="col w50 m">
@@ -22,9 +22,9 @@
         <textarea class="grow w100 mts" name="out" rows="14"></textarea>
       </div>
     </div>
-    <div class="row c mt">
-      <h2 style="margin-right: 0">rules</h2>
-      <button title="add rule" class="round ml" style="margin-right: auto" onclick="app.addRule()">+</button>
+    <div class="row center mt">
+      <h2 style="margin-right: 0;">rules</h2>
+      <button title="add rule" class="round ml" style="margin-right: auto;" onclick="app.addRule(false)">+</button>
     </div>
     <ul class="rules mt" onclick="app.onRuleClick(event)"></ul>
   </div>

@@ -13,11 +13,11 @@ html, body {
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png");
   font-family: sans-serif;
   font-size: 16px;
-  --success: darkseagreen;
   --disabled: darkgrey;
   --primary: navy;
   --primary-contrast: white;
   --secondary: steelblue;
+  --success: darkseagreen;
 }
 
 h1, h2 {
@@ -37,7 +37,7 @@ h2 {
   text-decoration: underline;
 }
 
-.c {
+.center {
   text-align: center;
 }
 
@@ -49,7 +49,7 @@ h2 {
   flex-direction: column;
 }
 
-.row.c {
+.row.center {
   justify-content: center;
 }
 
@@ -115,8 +115,8 @@ textarea {
 }
 
 ul.rules {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   list-style-type: decimal-leading-zero;
   max-height: 50%;
   overflow-x: hidden;
@@ -134,6 +134,7 @@ ul.rules li {
   margin-bottom: .4rem;
   margin-right: 2.5rem;
   opacity: .5;
+  overflow: hidden;
   padding: .3rem .4rem;
   transition: opacity .3s, background-color .3s;
 }
