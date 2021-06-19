@@ -1,7 +1,5 @@
-/* global document, window */
-
-function debounce(function_, waitFor) {
-  let timeout = setTimeout(() => {}, waitFor)
+function debounce (function_, waitFor) {
+  let timeout = setTimeout(() => { console.log('waiting...') }, waitFor)
   return (...parameters) => new Promise(resolve => {
     clearTimeout(timeout)
     timeout = setTimeout(() => resolve(function_(...parameters)), waitFor)
@@ -9,14 +7,14 @@ function debounce(function_, waitFor) {
 }
 
 class App {
-  constructor() {
+  constructor () {
     console.log('app init')
     this.nbRules = 0
     this.applyRules = debounce(() => this.applyRulesSync(), 500)
     window.addEventListener('load', () => this.onDocumentLoad())
   }
 
-  onDocumentLoad() {
+  onDocumentLoad () {
     this.setupElements()
     this.insertSample()
     this.addRule(true, '\\.', ' 😸')
@@ -27,16 +25,16 @@ class App {
     this.addRule(false, '', '')
   }
 
-  setupElements() {
+  setupElements () {
     this.textareaIn = document.querySelector('textarea[name="in"]')
     this.textareaOut = document.querySelector('textarea[name="out"]')
   }
 
-  onRuleClick(event) {
+  onRuleClick (event) {
     if (event.target.matches('[type="checkbox"]')) return this.toggleRule(event.target.parentElement, event.target.checked)
   }
 
-  toggleRule(element, isActive, dontApply) {
+  toggleRule (element, isActive, dontApply) {
     console.log(isActive ? 'activate' : 'disable', 'rule')
     element.querySelector('input[type="checkbox"]').checked = isActive
     element.dataset.ruleActive = isActive
@@ -44,13 +42,13 @@ class App {
     this.applyRules()
   }
 
-  getElementFromTemplate(name) {
+  getElementFromTemplate (name) {
     const element = document.querySelector(`template[name="${name}"]`)
     if (!element) throw new Error('failed to find template with name : ' + name)
     return element.content.cloneNode(true)
   }
 
-  addRule(isActive = true, replaceIn = '', replaceOut = '') {
+  addRule (isActive = true, replaceIn = '', replaceOut = '') {
     this.nbRules++
     console.log('add rule', this.nbRules)
     const element = this.getElementFromTemplate('rule')
@@ -62,7 +60,7 @@ class App {
     this.applyRules()
   }
 
-  applyRulesSync() {
+  applyRulesSync () {
     let text = this.textareaIn.value
     document.querySelectorAll('.rule[data-rule-active="true"]').forEach(element => {
       console.log('apply rule', element)
@@ -73,7 +71,7 @@ class App {
     this.textareaOut.value = text
   }
 
-  insertSample() {
+  insertSample () {
     this.textareaIn.value = [
       'This text will be processed & converted to the one on the right side.',
       'The rules below will be used to successively replace regular expressions.',
