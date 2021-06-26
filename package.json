@@ -3,7 +3,7 @@
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
-    "shuunen-stack": "0.9.6"
+    "shuunen-stack": "0.10.0"
   },
   "files": [
     "public"
