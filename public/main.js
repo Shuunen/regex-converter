@@ -62,12 +62,12 @@ class App {
 
   applyRulesSync () {
     let text = this.textareaIn.value
-    document.querySelectorAll('.rule[data-rule-active="true"]').forEach(element => {
+    for (const element of document.querySelectorAll('.rule[data-rule-active="true"]')) {
       console.log('apply rule', element)
       const replaceIn = element.querySelector('input[name="replace-in"]').value
       const replaceOut = element.querySelector('input[name="replace-out"]').value
       text = text.replace(new RegExp(replaceIn, 'gm'), replaceOut)
-    })
+    }
     this.textareaOut.value = text
   }
 

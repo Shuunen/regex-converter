@@ -3,7 +3,12 @@
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
-    "shuunen-stack": "0.14.0"
+    "eslint": "^8.2.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-unicorn": "^38.0.1",
+    "repo-check": "^1.20.1",
+    "servor": "^4.0.2"
   },
   "files": [
     "public"
@@ -24,8 +29,10 @@
   },
   "scripts": {
     "build": "echo nothing to build",
-    "dev": "stack serve public",
-    "lint": "stack lint",
+    "check": "repo-check",
+    "ci": "npm run lint && npm run check",
+    "dev": "servor public --browse --reload",
+    "lint": "eslint --fix --ignore-path .gitignore --ext .js,.html .",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
     "start": "npm run dev",

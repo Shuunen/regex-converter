@@ -5,4 +5,5 @@
 *.tgz
 dist
 node_modules
+pnpm-lock.yaml
 sample.*
