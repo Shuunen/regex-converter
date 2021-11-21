@@ -6,7 +6,6 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:promise/recommended",
     "plugin:unicorn/recommended"
   ],
   "overrides": [
@@ -28,7 +27,6 @@
   },
   "plugins": [
     "html",
-    "promise",
     "unicorn"
   ]
 }
