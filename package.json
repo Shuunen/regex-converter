@@ -5,7 +5,7 @@
   "devDependencies": {
     "eslint": "8",
     "eslint-plugin-html": "6",
-    "eslint-plugin-unicorn": "41",
+    "eslint-plugin-unicorn": "42",
     "repo-check": "^1.21",
     "servor": "4"
   },
