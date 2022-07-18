@@ -4,7 +4,7 @@
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
     "eslint": "8",
-    "eslint-plugin-html": "6",
+    "eslint-plugin-html": "7",
     "eslint-plugin-unicorn": "43",
     "repo-check": "^1.21",
     "servor": "4"
