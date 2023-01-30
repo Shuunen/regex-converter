@@ -11,7 +11,7 @@ class App {
   constructor () {
     console.log('app init')
     this.nbRules = 0
-    this.applyRules = debounce(() => this.applyRulesSync(), 500)
+    this.applyRules = debounce(() => this.applyRulesSync(), 250)
     window.addEventListener('load', () => this.onDocumentLoad())
   }
 
