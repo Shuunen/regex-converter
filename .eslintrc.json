@@ -8,6 +8,9 @@
     "eslint:recommended",
     "plugin:unicorn/all"
   ],
+  "ignorePatterns": [
+    "*.html"
+  ],
   "overrides": [
     {
       "env": {
