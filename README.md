@@ -13,8 +13,8 @@
 
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
+- [HeroPattern](https://heropatterns.com) : for the app background
 - [Netlify](https://netlify.com) : awesome company that offers free CI & hosting for OSS projects
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Servor](https://github.com/lukejacksonn/servor) : dependency free dev server for single page app development
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
-- [Toptal](https://www.toptal.com/designers/subtlepatterns) : for the background pattern
