@@ -30,7 +30,7 @@
     "build": "echo nothing to build && echo build success",
     "check": "repo-check",
     "ci": "npm run lint && npm run check && echo ci success",
-    "dev": "servor public --browse --reload",
+    "dev": "servor public --reload",
     "lint": "eslint --cache --fix --ignore-path .gitignore --ext .js . && echo ci success",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
