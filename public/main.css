@@ -10,7 +10,7 @@ html, body {
 }
 
 #app {
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png");
+  background: url("/double-bubble-outline.png");
   font-family: sans-serif;
   font-size: 16px;
   --disabled: darkgrey;
