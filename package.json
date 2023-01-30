@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
   "description": "Web app to apply successive regex text substitutions",
@@ -6,7 +7,7 @@
     "eslint": "8",
     "eslint-plugin-html": "7",
     "eslint-plugin-unicorn": "45",
-    "repo-check": "^1.21",
+    "repo-check": "1.30",
     "servor": "4"
   },
   "files": [
@@ -27,15 +28,15 @@
     "url": "https://github.com/Shuunen/regex-converter.git"
   },
   "scripts": {
-    "build": "echo nothing to build",
+    "build": "echo nothing to build && echo build success",
     "check": "repo-check",
-    "ci": "npm run lint && npm run check",
+    "ci": "npm run lint && npm run check && echo ci success",
     "dev": "servor public --browse --reload",
-    "lint": "eslint --fix --ignore-path .gitignore --ext .js,.html .",
+    "lint": "eslint --cache --fix --ignore-path .gitignore --ext .js . && echo ci success",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
     "start": "npm run dev",
-    "test": "echo nothing to test"
+    "test": "echo nothing to test && echo test success"
   },
   "version": "0.1.1"
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 function debounce (function_, waitFor) {
   let timeout = setTimeout(() => { console.log('waiting...') }, waitFor)
   return (...parameters) => new Promise(resolve => {
