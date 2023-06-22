@@ -12,8 +12,8 @@ devDependencies:
     specifier: '47'
     version: 47.0.0(eslint@8.33.0)
   repo-check:
-    specifier: '1.31'
-    version: 1.31.0
+    specifier: '1.32'
+    version: 1.32.0
   servor:
     specifier: '4'
     version: 4.0.2
@@ -263,11 +263,6 @@ packages:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
 
-  /dequal@2.0.3:
-    resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
-    engines: {node: '>=6'}
-    dev: true
-
   /detect-indent@5.0.0:
     resolution: {integrity: sha512-rlpvsxUtM0PQvy9iZe640/IWwWYyBsTApREbA1pHOpmOUIl9MkP/U4z7vTtg4Oaojvqhxt7sdufnT0EzGaR31g==}
     engines: {node: '>=4'}
@@ -276,11 +271,6 @@ packages:
   /detect-newline@2.1.0:
     resolution: {integrity: sha512-CwffZFvlJffUg9zZA0uqrjQayUTC8ob94pnr5sFwaVv3IOmkfUHcWH+jXaQK3askE51Cqe8/9Ql/0uXNwqZ8Zg==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /diff@5.1.0:
-    resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
-    engines: {node: '>=0.3.1'}
     dev: true
 
   /doctrine@3.0.0:
@@ -676,11 +666,6 @@ packages:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
 
-  /kleur@4.1.5:
-    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
-    engines: {node: '>=6'}
-    dev: true
-
   /levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -735,11 +720,6 @@ packages:
 
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
-    dev: true
-
-  /mri@1.2.0:
-    resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
-    engines: {node: '>=4'}
     dev: true
 
   /ms@2.1.2:
@@ -901,12 +881,12 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /repo-check@1.31.0:
-    resolution: {integrity: sha512-mMXPcw4bD4PzIed2E3Uh00dEVG7WFPDCEpjHnHCz3KmJXMrBK1SFbKnO+sny0xoXeHB8OnDyTa7+ZMakWFNy6w==}
+  /repo-check@1.32.0:
+    resolution: {integrity: sha512-jZc/u9gszyc9I2s7RAKRGQfOMi3y3Oex/jgVimxbBpFBj/8wOhw8i442Ps/CA/8RaZHAjY86kUxc0heJKSKmJA==}
     hasBin: true
     dependencies:
       arg: 5.0.2
-      shuutils: 7.2.0
+      shuutils: 7.3.0
       sort-json: 2.0.1
     dev: true
 
@@ -940,13 +920,6 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
-    dev: true
-
-  /sade@1.8.1:
-    resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
-    engines: {node: '>=6'}
-    dependencies:
-      mri: 1.2.0
     dev: true
 
   /safe-regex@2.1.1:
@@ -985,12 +958,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shuutils@7.2.0:
-    resolution: {integrity: sha512-iJ8BPnmJrujHO5bfreBg2V71KjKnvM+NXibKXM3f3MizRM9sofLntCGgKoUU7XmGXVZuu9oUsA5Y4F21oLxDhg==}
+  /shuutils@7.3.0:
+    resolution: {integrity: sha512-M1i5OiV4McnXMCNoN2Ao+MKR+C+UEV784QZtGQzX53WYKEUBbJ5yH43qln8VsXl75AM15xKnRHZrLNtMHv3u4A==}
     hasBin: true
     dependencies:
       tiny-glob: 0.2.9
-      uvu: 0.5.6
     dev: true
 
   /sort-json@2.0.1:
@@ -1099,17 +1071,6 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
-    dev: true
-
-  /uvu@0.5.6:
-    resolution: {integrity: sha512-+g8ENReyr8YsOc6fv/NVJs2vFdHBnBNdfE49rshrTzDWOlUx4Gq7KOS2GD8eqhy2j+Ejq29+SbKH8yjkAqXqoA==}
-    engines: {node: '>=8'}
-    hasBin: true
-    dependencies:
-      dequal: 2.0.3
-      diff: 5.1.0
-      kleur: 4.1.5
-      sade: 1.8.1
     dev: true
 
   /validate-npm-package-license@3.0.4:
