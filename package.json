@@ -5,6 +5,7 @@
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
     "eslint": "9",
+    "eslint-plugin-perfectionist": "2",
     "eslint-plugin-unicorn": "54",
     "repo-check": "1.35",
     "servor": "4"
@@ -28,13 +29,12 @@
   },
   "scripts": {
     "build": "echo nothing to build && echo build success",
-    "check": "repo-check",
-    "ci": "npm run lint && npm run check && echo ci success",
+    "check": "pnpm install && echo install success && pnpm lint && repo-check && echo repo-check success && echo check success",
     "dev": "servor public --reload",
-    "lint": "eslint --cache --fix --ignore-path .gitignore --ext .js . && echo ci success",
+    "lint": "eslint --cache --fix --max-warnings 0 . && echo lint success",
     "postversion": "git push && git push --tags",
-    "preversion": "npm run lint",
-    "start": "npm run dev",
+    "preversion": "pnpm lint",
+    "start": "pnpm dev",
     "test": "echo nothing to test && echo test success"
   },
   "version": "0.1.1"

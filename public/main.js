@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 function debounce (function_, waitFor) {
   let timeout = setTimeout(() => { console.log('waiting...') }, waitFor)
   return (...parameters) => new Promise(resolve => {
@@ -13,40 +12,6 @@ class App {
     this.nbRules = 0
     this.applyRules = debounce(() => this.applyRulesSync(), 250)
     window.addEventListener('load', () => this.onDocumentLoad())
-  }
-
-  onDocumentLoad () {
-    this.setupElements()
-    this.insertSample()
-    this.addRule(true, '\\.', ' 😸')
-    this.addRule(true, 'right\\s', '')
-    this.addRule(false, '([A-Z])', '- $1')
-    this.addRule(false, '', '')
-    this.addRule(false, '', '')
-    this.addRule(false, '', '')
-  }
-
-  setupElements () {
-    this.textareaIn = document.querySelector('textarea[name="in"]')
-    this.textareaOut = document.querySelector('textarea[name="out"]')
-  }
-
-  onRuleClick (event) {
-    if (event.target.matches('[type="checkbox"]')) return this.toggleRule(event.target.parentElement, event.target.checked)
-  }
-
-  toggleRule (element, isActive, dontApply) {
-    console.log(isActive ? 'activate' : 'disable', 'rule')
-    element.querySelector('input[type="checkbox"]').checked = isActive
-    element.dataset.ruleActive = isActive
-    if (dontApply) return
-    this.applyRules()
-  }
-
-  getElementFromTemplate (name) {
-    const element = document.querySelector(`template[name="${name}"]`)
-    if (!element) throw new Error('failed to find template with name : ' + name)
-    return element.content.cloneNode(true)
   }
 
   addRule (isActive = true, replaceIn = '', replaceOut = '') {
@@ -72,6 +37,12 @@ class App {
     this.textareaOut.value = text
   }
 
+  getElementFromTemplate (name) {
+    const element = document.querySelector(`template[name="${name}"]`)
+    if (!element) throw new Error('failed to find template with name : ' + name)
+    return element.content.cloneNode(true)
+  }
+
   insertSample () {
     this.textareaIn.value = [
       'This text will be processed & converted to the one on the right side.',
@@ -84,6 +55,34 @@ class App {
       '',
       'Tutorial is over, paste your own text, customize the rules, you can have more rules by adding them with the (+) button below :)`',
     ].join('\n')
+  }
+
+  onDocumentLoad () {
+    this.setupElements()
+    this.insertSample()
+    this.addRule(true, String.raw`\.`, ' 😸')
+    this.addRule(true, String.raw`right\s`, '')
+    this.addRule(false, '([A-Z])', '- $1')
+    this.addRule(false, '', '')
+    this.addRule(false, '', '')
+    this.addRule(false, '', '')
+  }
+
+  onRuleClick (event) {
+    if (event.target.matches('[type="checkbox"]')) return this.toggleRule(event.target.parentElement, event.target.checked)
+  }
+
+  setupElements () {
+    this.textareaIn = document.querySelector('textarea[name="in"]')
+    this.textareaOut = document.querySelector('textarea[name="out"]')
+  }
+
+  toggleRule (element, isActive, dontApply) {
+    console.log(isActive ? 'activate' : 'disable', 'rule')
+    element.querySelector('input[type="checkbox"]').checked = isActive
+    element.dataset.ruleActive = isActive
+    if (dontApply) return
+    this.applyRules()
   }
 }
 
