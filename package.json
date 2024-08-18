@@ -4,9 +4,8 @@
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
-    "eslint": "9",
-    "eslint-plugin-perfectionist": "3",
-    "eslint-plugin-unicorn": "55",
+    "eslint": "*",
+    "eslint-plugin-shuunen": "0.3",
     "repo-check": "1.37",
     "servor": "4"
   },
@@ -31,11 +30,12 @@
     "build": "echo nothing to build && echo build success",
     "check": "pnpm install && echo install success && pnpm lint && repo-check && echo repo-check success && echo check success",
     "dev": "servor public --reload",
-    "lint": "eslint --cache --fix --max-warnings 0 . && echo lint success",
+    "lint": "eslint --cache --max-warnings 0 public && echo lint success",
     "postversion": "git push && git push --tags",
     "preversion": "pnpm lint",
     "start": "pnpm dev",
     "test": "echo nothing to test && echo test success"
   },
+  "type": "module",
   "version": "0.1.1"
 }

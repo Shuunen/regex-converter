@@ -6,6 +6,7 @@ function debounce (function_, waitFor) {
   })
 }
 
+// eslint-disable-next-line no-restricted-syntax
 class App {
   constructor () {
     console.log('app init')
@@ -15,7 +16,7 @@ class App {
   }
 
   addRule (isActive = true, replaceIn = '', replaceOut = '') {
-    this.nbRules++
+    this.nbRules += 1
     console.log('add rule', this.nbRules)
     const element = this.getElementFromTemplate('rule')
     element.querySelector('.rule').dataset.ruleId = this.nbRules
@@ -32,14 +33,15 @@ class App {
       console.log('apply rule', element)
       const replaceIn = element.querySelector('input[name="replace-in"]').value
       const replaceOut = element.querySelector('input[name="replace-out"]').value
-      text = text.replace(new RegExp(replaceIn, 'gm'), replaceOut)
+      text = text.replace(new RegExp(replaceIn, 'gmu'), replaceOut)
     }
     this.textareaOut.value = text
   }
 
+  // eslint-disable-next-line class-methods-use-this
   getElementFromTemplate (name) {
     const element = document.querySelector(`template[name="${name}"]`)
-    if (!element) throw new Error('failed to find template with name : ' + name)
+    if (!element) throw new Error(`failed to find template with name : ${name}`)
     return element.content.cloneNode(true)
   }
 
@@ -69,7 +71,7 @@ class App {
   }
 
   onRuleClick (event) {
-    if (event.target.matches('[type="checkbox"]')) return this.toggleRule(event.target.parentElement, event.target.checked)
+    if (event.target.matches('[type="checkbox"]')) this.toggleRule(event.target.parentElement, event.target.checked)
   }
 
   setupElements () {
