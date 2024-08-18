@@ -2,9 +2,7 @@
 
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/regex-converter?style=flat)](https://codeclimate.com/github/Shuunen/regex-converter)
 [![GitHub license](https://img.shields.io/github/license/shuunen/regex-converter.svg?color=informational)](https://github.com/Shuunen/regex-converter/blob/master/LICENSE)
-
 [![Website Up](https://img.shields.io/website/https/regex-converter.netlify.app.svg)](https://regex-converter.netlify.app)
-[![Scrutinizer Score](https://scrutinizer-ci.com/g/Shuunen/regex-converter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Shuunen/regex-converter)
 
 > Convert any text content using one or multiple regex
 
