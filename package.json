@@ -6,7 +6,7 @@
   "devDependencies": {
     "eslint": "*",
     "eslint-plugin-shuunen": "0.3",
-    "repo-check": "1.37",
+    "repo-check": "1.38",
     "servor": "4"
   },
   "files": [
