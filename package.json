@@ -5,7 +5,7 @@
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
     "eslint": "*",
-    "eslint-plugin-shuunen": "0.3",
+    "eslint-plugin-shuunen": "0.4",
     "repo-check": "1.39",
     "servor": "4"
   },
