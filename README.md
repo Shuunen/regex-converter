@@ -15,3 +15,11 @@
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Servor](https://github.com/lukejacksonn/servor) : dependency free dev server for single page app development
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Shuunen/regex-converter.svg?variant=adaptive)](https://starchart.cc/Shuunen/regex-converter)
+
+## Page views
+
+[![Free Website Counter](https://www.websitecounterfree.com/c.php?d=9&id=64381&s=12)](https://www.websitecounterfree.com)
