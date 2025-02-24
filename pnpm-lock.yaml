@@ -15,8 +15,8 @@ importers:
         specifier: '1.0'
         version: 1.0.2(eslint@9.9.0(jiti@1.21.6))(tailwindcss@3.4.10)(typescript@5.5.4)
       repo-check:
-        specifier: '1.40'
-        version: 1.40.0
+        specifier: '1.41'
+        version: 1.41.0
       servor:
         specifier: '4'
         version: 4.0.2
@@ -905,8 +905,8 @@ packages:
     resolution: {integrity: sha512-qx+xQGZVsy55CH0a1hiVwHmqjLryfh7wQyF5HO07XJ9f7dQMY/gPQHhlyDkIzJKC+x2fUCpCcUODUUUFrm7SHA==}
     hasBin: true
 
-  repo-check@1.40.0:
-    resolution: {integrity: sha512-EO5AKEYlUU8cRDq/9PVEkTsQ19371lCdw38KTHVWH48Nxq7kS6uJXYEHBii/AQ0kXRVxJP57uMi84lGH5zNRZQ==}
+  repo-check@1.41.0:
+    resolution: {integrity: sha512-ELPb5I2CaVYZ9lHsEqKnPF1e+8Pi1uT13ss/mc0lzXFsF3jsjNUM3V9jxCUwc6CgIRrBgBLYrC5DezJa3xfIvA==}
     hasBin: true
 
   resolve-from@4.0.0:
@@ -916,6 +916,9 @@ packages:
   resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
+
+  resultx@2.0.2:
+    resolution: {integrity: sha512-wWaAwKrlQlIa4IIGkQi7UE4tt3XwoDI+XRDTYY8hVVaqQSwnQR4tDkLweSSvjtKNsUC86MKfok65+hNNLbZW4Q==}
 
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
@@ -945,8 +948,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shuutils@10.1.0:
-    resolution: {integrity: sha512-Q+8PaUIik4W3bEE2xtDMZvYC7y4B8mnh3x7cneXPJmry0esVRir+hSZHh5Kjh6rtV0pYj+eKtAXBxJ8LDqPZhA==}
+  shuutils@10.4.0:
+    resolution: {integrity: sha512-PMeon5coA7kQEjB0HQUalqqWBd9RLbeopVW3CwGd1sE9wFsgwNm1aBTKi+QMhym+toHLHoSr9ai5kFMe/VUa7g==}
     hasBin: true
 
   signal-exit@4.1.0:
@@ -2045,10 +2048,10 @@ snapshots:
     dependencies:
       jsesc: 0.5.0
 
-  repo-check@1.40.0:
+  repo-check@1.41.0:
     dependencies:
       arg: 5.0.2
-      shuutils: 10.1.0
+      shuutils: 10.4.0
       sort-json: 2.0.1
 
   resolve-from@4.0.0: {}
@@ -2058,6 +2061,8 @@ snapshots:
       is-core-module: 2.15.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+
+  resultx@2.0.2: {}
 
   reusify@1.0.4: {}
 
@@ -2077,8 +2082,9 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shuutils@10.1.0:
+  shuutils@10.4.0:
     dependencies:
+      resultx: 2.0.2
       tiny-glob: 0.2.9
 
   signal-exit@4.1.0: {}
