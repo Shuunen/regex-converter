@@ -6,6 +6,12 @@
 
 > Convert any text content using one or multiple regex
 
+## Archived
+
+This repo is archived since it migrated to [Shuunen/monorepo](https://github.com/Shuunen/monorepo/tree/master/apps/regex-converter).
+
+Further development will be done there 🚀
+
 ## Thanks
 
 - [Eslint](https://eslint.org) : super tool to find & fix problems
