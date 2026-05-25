@@ -2,6 +2,9 @@
   "$schema": "https://json.schemastore.org/package",
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/regex-converter/issues",
+  "dependencies": {
+    "shuutils": "^10.6.0"
+  },
   "description": "Web app to apply successive regex text substitutions",
   "devDependencies": {
     "eslint": "*",
