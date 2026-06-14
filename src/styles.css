@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--color-white);
+  --color-card: var(--color-white);
+  --color-card-foreground: var(--color-zinc-950);
+  --color-primary: var(--color-blue-500);
+  --color-primary-foreground: var(--color-zinc-50);
+  --color-secondary: var(--color-teal-600);
+  --color-secondary-foreground: var(--color-zinc-900);
+  --color-muted: var(--color-zinc-100);
+  --color-muted-foreground: var(--color-zinc-500);
+  --color-accent: var(--color-zinc-100);
+  --color-accent-foreground: var(--color-zinc-900);
+  --color-destructive: var(--color-red-600);
+  --color-input: var(--color-zinc-200);
+  --color-ring: var(--color-zinc-400);
+  --color-info: var(--color-blue-700);
+  --color-info-light: var(--color-blue-500);
+}
+
+@layer base {
+  body {
+    @apply bg-background;
+  }
+}
