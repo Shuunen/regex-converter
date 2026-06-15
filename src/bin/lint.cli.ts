@@ -34,7 +34,8 @@ async function getTargetFiles(argv: string[]): Promise<string[]> {
   const { target = '' } = args
   if (target.length === 0) throw new Error('missing target argument')
   const matches = await glob(target, { filesOnly: true })
-  return matches.map(match => path.resolve(process.cwd(), match)).filter(match => match.endsWith('.md'))
+  const cwd = process.cwd()
+  return matches.map(match => path.resolve(cwd, match)).filter(match => match.endsWith('.md') && match.startsWith(cwd + path.sep))
 }
 
 async function main(argv: string[]) {

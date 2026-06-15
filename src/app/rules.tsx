@@ -27,7 +27,7 @@ export function Rules({ rules, setRules }: { rules: Rule[]; setRules: (rules: Ru
     setRules(rules.map(rule => (rule.id === id ? { ...rule, [key]: value } : rule)))
   }
   function addRule() {
-    setRules([...rules, { enabled: false, id: `«r${rules.length}»`, pattern: '', replacement: '' }])
+    setRules([...rules, { enabled: false, id: crypto.randomUUID(), pattern: '', replacement: '' }])
   }
   function removeRule(id: string) {
     setRules(rules.filter(rule => rule.id !== id))

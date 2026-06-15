@@ -33,7 +33,11 @@ export function Converter() {
     const params = getSearchParams()
     params.set('rules', encodeForUrl(rules))
     const newUrl = `${globalThis.location.pathname}?${params.toString()}`
-    globalThis.history.replaceState(emptyHistory, '', newUrl)
+    try {
+      globalThis.history.replaceState(emptyHistory, '', newUrl)
+    } catch (error) {
+      console.error('Failed to update URL, maybe too long ?', { error })
+    }
   }, [rules])
   const output = applyRules(input, rules)
   /* v8 ignore next -- @preserve */

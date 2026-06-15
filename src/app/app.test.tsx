@@ -9,6 +9,6 @@ describe(App, () => {
 
   it('should have a heading', () => {
     const { getByTestId } = render(<App />)
-    expect(getByTestId('app-heading')).toBeDefined()
+    expect(getByTestId('app-heading').tagName).toBe('H1')
   })
 })
