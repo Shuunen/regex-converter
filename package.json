@@ -47,7 +47,7 @@
   ],
   "license": "GPL-3.0",
   "name": "@shuunen/regex-converter",
-  "packageManager": "pnpm@10.34.4",
+  "packageManager": "pnpm@11.11.0",
   "private": true,
   "repository": {
     "type": "git",
