@@ -1,2 +1,4 @@
+allowBuilds:
+  bun: true
 onlyBuiltDependencies:
   - bun
