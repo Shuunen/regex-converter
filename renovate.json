@@ -1,5 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "dependencyDashboard": false,
-  "extends": ["config:base", ":automergeAll", ":preserveSemverRanges"]
+  "extends": ["config:base", ":automergeAll", ":preserveSemverRanges"],
+  "schedule": ["before 6am on the first day of the month"],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch", "minor", "major", "digest"],
+      "groupName": "monthly dependency updates",
+      "schedule": ["before 6am on the first day of the month"]
+    }
+  ]
 }
