@@ -6,9 +6,6 @@ import { uniqueMark } from './src/plugins/unique-mark.ts'
 // oxlint-disable-next-line import/no-default-export
 export default defineConfig({
   build: {
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
     emptyOutDir: true,
     reportCompressedSize: false,
     rolldownOptions: {
