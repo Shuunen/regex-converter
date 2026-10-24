@@ -8,8 +8,8 @@ import { rules } from './lint.rules'
 const argvStart = 2 // skip node binary + script path
 
 function lintFile(filePath: string): string[] {
-  let content = fs.readFileSync(filePath, 'utf8')
   let changed = false
+  let content = fs.readFileSync(filePath, 'utf8')
   const issues: string[] = []
   for (const rule of rules) {
     if (rule.fixer !== undefined) {
@@ -33,8 +33,8 @@ async function getTargetFiles(argv: string[]): Promise<string[]> {
   }
   const { target = '' } = args
   if (target.length === 0) throw new Error('missing target argument')
-  const matches = await glob(target, { filesOnly: true })
   const cwd = process.cwd()
+  const matches = await glob(target, { filesOnly: true })
   return matches.map(match => path.resolve(cwd, match)).filter(match => match.endsWith('.md') && match.startsWith(cwd + path.sep))
 }
 

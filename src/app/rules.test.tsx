@@ -7,9 +7,9 @@ const sampleRule: Rule = { enabled: true, id: '1', pattern: 'foo', replacement: 
 
 describe(RuleLine, () => {
   it('RuleLine A should render rule fields and call onChange/onRemove', () => {
-    const onChange = vi.fn<() => void>()
-    const onRemove = vi.fn<() => void>()
-    const { getByTestId, getAllByTestId } = render(<RuleLine onChange={onChange} onRemove={onRemove} rule={sampleRule} />)
+    const onChange = vi.fn<() => void>(),
+      onRemove = vi.fn<() => void>(),
+      { getByTestId, getAllByTestId } = render(<RuleLine onChange={onChange} onRemove={onRemove} rule={sampleRule} />)
     fireEvent.change(getByTestId('input-rule-1-pattern'), { target: { value: 'baz' } })
     expect(onChange).toHaveBeenCalledWith('pattern', 'baz')
     fireEvent.change(getByTestId('input-rule-1-replacement'), { target: { value: 'qux' } })
@@ -21,9 +21,9 @@ describe(RuleLine, () => {
   })
 
   it('RuleLine B should call onChange for enabled switch', () => {
-    const onChange = vi.fn<() => void>()
-    const onRemove = vi.fn<() => void>()
-    const { getByTestId } = render(<RuleLine onChange={onChange} onRemove={onRemove} rule={sampleRule} />)
+    const onChange = vi.fn<() => void>(),
+      onRemove = vi.fn<() => void>(),
+      { getByTestId } = render(<RuleLine onChange={onChange} onRemove={onRemove} rule={sampleRule} />)
     fireEvent.click(getByTestId('switch-rule-1'))
     expect(onChange).toHaveBeenCalledWith('enabled', false)
   })
@@ -33,9 +33,9 @@ describe(Rules, () => {
   it('Rules A should render rules and allow add/remove/update', () => {
     let rules: Rule[] = [sampleRule]
     const setRules = vi.fn<(updated: typeof rules) => void>(updated => {
-      rules = updated
-    })
-    const { getByTestId, getAllByTestId } = render(<Rules rules={rules} setRules={setRules} />)
+        rules = updated
+      }),
+      { getByTestId, getAllByTestId } = render(<Rules rules={rules} setRules={setRules} />)
     fireEvent.click(getByTestId('button-add'))
     expect(setRules).toHaveBeenCalledWith(expect.any(Array))
     const [removeButton] = getAllByTestId('button-delete')
@@ -49,9 +49,9 @@ describe(Rules, () => {
   it('Rules B should handle empty rules array and add rule', () => {
     let rules: Rule[] = []
     const setRules = vi.fn<(updated: typeof rules) => void>(updated => {
-      rules = updated
-    })
-    const { getByTestId } = render(<Rules rules={rules} setRules={setRules} />)
+        rules = updated
+      }),
+      { getByTestId } = render(<Rules rules={rules} setRules={setRules} />)
     fireEvent.click(getByTestId('button-add'))
     expect(setRules).toHaveBeenCalledWith(expect.any(Array))
   })
@@ -59,10 +59,10 @@ describe(Rules, () => {
   it('Rules C should remove last rule and leave empty', () => {
     let rules: Rule[] = [sampleRule]
     const setRules = vi.fn<(updated: typeof rules) => void>(updated => {
-      rules = updated
-    })
-    const { getAllByTestId } = render(<Rules rules={rules} setRules={setRules} />)
-    const [removeButton] = getAllByTestId('button-delete')
+        rules = updated
+      }),
+      { getAllByTestId } = render(<Rules rules={rules} setRules={setRules} />),
+      [removeButton] = getAllByTestId('button-delete')
     invariant(removeButton, 'Remove button not found')
     fireEvent.click(removeButton)
     expect(setRules).toHaveBeenCalledWith([])

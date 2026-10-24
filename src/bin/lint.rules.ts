@@ -21,8 +21,8 @@ export function hasContent(content: string): boolean {
 
 export function toHumanTitle(filePath: string): string {
   const baseName = path.basename(filePath, '.md')
-  const words = baseName.split('-')
   const titleParts: string[] = []
+  const words = baseName.split('-')
   for (const word of words) if (word.length > 0) titleParts.push(word.charAt(0).toUpperCase() + word.slice(1))
   return titleParts.join(' ')
 }

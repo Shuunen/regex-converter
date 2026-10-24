@@ -1,5 +1,5 @@
-const hexRadix = 16
-const padLength = 2
+const hexRadix = 16,
+  padLength = 2
 
 function toBase64(str: string) {
   return globalThis.btoa(encodeURIComponent(str).replaceAll(/%(?<hex>[0-9A-F]{2})/g, (_value: string, hex: string) => String.fromCodePoint(Number.parseInt(hex, hexRadix))))
@@ -23,8 +23,8 @@ export function encodeForUrl(data: unknown) {
 
 export function decodeFromUrl(str: string): unknown {
   try {
-    const b64 = decodeURIComponent(str)
-    const decoded = fromBase64(b64)
+    const b64 = decodeURIComponent(str),
+      decoded = fromBase64(b64)
     return JSON.parse(decoded) as unknown
   } catch {
     return ''

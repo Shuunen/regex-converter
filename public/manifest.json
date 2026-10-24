@@ -1,0 +1,8 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "regex-converter",
+  "short_name": "regex-converter",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}

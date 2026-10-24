@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 // source : https://ui.aceternity.com/components/typewriter-effect
 
-export const TypewriterEffectSmooth = ({
+export function TypewriterEffectSmooth({
   words,
   className,
   cursorClassName,
@@ -15,7 +15,7 @@ export const TypewriterEffectSmooth = ({
   }[]
   className?: string
   cursorClassName?: string
-}) => {
+}) {
   const wordsArray = words.map(word => {
     return {
       ...word,

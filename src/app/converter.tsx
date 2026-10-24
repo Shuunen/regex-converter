@@ -12,23 +12,23 @@ function getSearchParams(): URLSearchParams {
 }
 
 export function Converter() {
-  const [input, setInput] = useState(sampleInput)
-  const defaultRules: Rule[] = [
-    { enabled: true, id: useId(), pattern: '\\.', replacement: '🐱' },
-    { enabled: true, id: useId(), pattern: 'right', replacement: '' },
-    { enabled: false, id: useId(), pattern: '([A-Z])', replacement: '- $1' },
-    { enabled: false, id: useId(), pattern: '', replacement: '' },
-  ]
-  const [rules, setRules] = useState<Rule[]>(() => {
-    const params = getSearchParams()
-    const rulesParam = params.get('rules')
-    if (rulesParam) {
-      const loaded = decodeFromUrl(rulesParam) as Rule[]
-      /* v8 ignore if */
-      if (Array.isArray(loaded) && loaded.length > 0) return loaded
-    }
-    return defaultRules
-  })
+  const [input, setInput] = useState(sampleInput),
+    defaultRules: Rule[] = [
+      { enabled: true, id: useId(), pattern: String.raw`\.`, replacement: '🐱' },
+      { enabled: true, id: useId(), pattern: 'right', replacement: '' },
+      { enabled: false, id: useId(), pattern: '([A-Z])', replacement: '- $1' },
+      { enabled: false, id: useId(), pattern: '', replacement: '' },
+    ],
+    [rules, setRules] = useState<Rule[]>(() => {
+      const params = getSearchParams(),
+        rulesParam = params.get('rules')
+      if (rulesParam) {
+        const loaded = decodeFromUrl(rulesParam) as Rule[]
+        /* v8 ignore if */
+        if (Array.isArray(loaded) && loaded.length > 0) return loaded
+      }
+      return defaultRules
+    })
   useEffect(() => {
     const params = getSearchParams()
     params.set('rules', encodeForUrl(rules))

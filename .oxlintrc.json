@@ -93,6 +93,7 @@
     "consistent-type-definitions": ["error", "type"],
     "consistent-type-specifier-style": "off",
     "curly": ["error", "multi"],
+    "one-var": "off",
     "explicit-function-return-type": "off",
     "explicit-module-boundary-types": "off",
     "exports-last": "off",

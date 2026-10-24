@@ -47,8 +47,8 @@ function generateMark({ commit = '', date = new Date(), version = '' }: { commit
 }
 
 function injectMarkInAsset({ asset, fileName, mark, placeholder }: { asset: Record<string, string>; fileName: string; mark: string; placeholder: string }) {
-  const firstLine = fileName.endsWith('.html') ? '' : `/* ${placeholder} : ${mark} */\n`
   const contentKey = fileName.endsWith('.js') ? 'code' : 'source'
+  const firstLine = fileName.endsWith('.html') ? '' : `/* ${placeholder} : ${mark} */\n`
   /* v8 ignore start */
   if (asset[contentKey] === undefined) {
     console.warn(yellow(`Warning /!\\ no content found for ${fileName}, skipping mark injection.`))
@@ -95,8 +95,8 @@ function getProjectVersion(projectRoot: string) {
 
 export function uniqueMark(options: { placeholder?: string } = {}): Plugin {
   const placeholder = options.placeholder ?? 'unique-mark'
-  let projectRoot = ''
-  let projectVersion = ''
+  let projectRoot = '',
+    projectVersion = ''
   return {
     apply: 'build',
     configResolved(config) {
