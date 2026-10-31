@@ -17,6 +17,9 @@ export default defineConfig({
     },
   },
   plugins: [react(), tailwindcss(), uniqueMark()],
+  // dedicated ports, so apps never collide when running together
+  preview: { port: 4108, strictPort: true },
+  server: { port: 5108, strictPort: true },
   test: {
     coverage: {
       provider: 'v8' as const,
