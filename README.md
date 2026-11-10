@@ -44,6 +44,7 @@ pnpm test       # run unit tests
 - [Netlify](https://netlify.com) : awesome company that offers free CI & hosting for OSS projects
 - [Oxc](https://oxc.rs) : oxlint & oxfmt, a fast linter & formatter suite
 - [React](https://react.dev) : the library for web and native user interfaces
+- [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Tailwind CSS](https://tailwindcss.com) : awesome lib to produce maintainable style
