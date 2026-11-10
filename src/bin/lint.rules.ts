@@ -9,17 +9,17 @@ export type Rule = {
   name: string
 }
 
-export function hasOneH1(content: string): boolean {
+function hasOneH1(content: string): boolean {
   const matches = content.match(regexH1)
   return Array.isArray(matches) && matches.length === 1
 }
 
-export function hasContent(content: string): boolean {
+function hasContent(content: string): boolean {
   const lines = content.split('\n').filter(line => line.trim().length > 0 && !line.startsWith('#'))
   return lines.length > 0
 }
 
-export function toHumanTitle(filePath: string): string {
+function toHumanTitle(filePath: string): string {
   const baseName = path.basename(filePath, '.md')
   const titleParts: string[] = []
   const words = baseName.split('-')

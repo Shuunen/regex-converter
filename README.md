@@ -1,11 +1,17 @@
-# regex-converter
+# Regex Converter
 
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/regex-converter?style=flat)](https://codeclimate.com/github/Shuunen/regex-converter)
 [![GitHub license](https://img.shields.io/github/license/shuunen/regex-converter.svg?color=informational)](https://github.com/Shuunen/regex-converter/blob/master/LICENSE)
 [![Visitors](https://hits.sh/github.com/Shuunen/regex-converter.svg?label=visitors&color=informational)](https://hits.sh/github.com/Shuunen/regex-converter/)
 [![Website Up](https://img.shields.io/website/https/regex-converter.netlify.app.svg)](https://regex-converter.netlify.app)
 
+![logo](docs/banner.svg)
+
 > Convert any text content using one or multiple regex
+
+## Demo
+
+![demo](docs/demo.svg)
 
 ## Stack
 
@@ -34,20 +40,12 @@ pnpm test       # run unit tests
 - [Bun](https://bun.sh) : fast all-in-one JavaScript runtime
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
 - [HeroPattern](https://heropatterns.com) : for the app background
+- [Knip](https://github.com/webpro/knip) : super tool to find & fix problems
 - [Netlify](https://netlify.com) : awesome company that offers free CI & hosting for OSS projects
 - [Oxc](https://oxc.rs) : oxlint & oxfmt, a fast linter & formatter suite
 - [React](https://react.dev) : the library for web and native user interfaces
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
-- [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
 - [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Tailwind CSS](https://tailwindcss.com) : awesome lib to produce maintainable style
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
 - [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/Shuunen/regex-converter.svg?variant=adaptive)](https://starchart.cc/Shuunen/regex-converter)
-
-## Page views
-
-[![Free Website Counter](https://www.websitecounterfree.com/c.php?d=9&id=64381&s=12)](https://www.websitecounterfree.com)

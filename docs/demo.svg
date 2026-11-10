@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" role="img" aria-label="Regex Converter demo: enabling rules live-updates the output">
+<title>Regex Converter demo</title>
+<style>
+.m{font:15px ui-monospace,Menlo,Consolas,monospace;fill:#18181b}
+.h{font:600 14px system-ui,sans-serif;fill:#3b82f6}
+.h2{font:600 14px system-ui,sans-serif;fill:#0d9488}
+.t{font:700 32px system-ui,sans-serif;fill:#18181b}
+.sw,.kn,.o1,.o2,.o3,.r2,.r3{animation-duration:12s;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
+.sw{fill:#d4d4d8}
+.s1{fill:#3b82f6}
+.s2{animation-name:swc2}.s3{animation-name:swc3}
+.s2k{animation-name:kn2}.s3k{animation-name:kn3}
+@keyframes swc2{0%,27%{fill:#d4d4d8}31%,97%{fill:#3b82f6}100%{fill:#d4d4d8}}
+@keyframes swc3{0%,57%{fill:#d4d4d8}61%,97%{fill:#3b82f6}100%{fill:#d4d4d8}}
+@keyframes kn2{0%,27%{transform:translateX(0)}31%,97%{transform:translateX(20px)}100%{transform:translateX(0)}}
+@keyframes kn3{0%,57%{transform:translateX(0)}61%,97%{transform:translateX(20px)}100%{transform:translateX(0)}}
+.o1{animation-name:a1}.o2{animation-name:a2}.o3{animation-name:a3}
+@keyframes a1{0%,26%{opacity:1}29%,97%{opacity:0}100%{opacity:1}}
+@keyframes a2{0%,26%{opacity:0}29%,56%{opacity:1}59%,100%{opacity:0}}
+@keyframes a3{0%,56%{opacity:0}59%,95%{opacity:1}98%,100%{opacity:0}}
+.r2{animation-name:p2}.r3{animation-name:p3}
+@keyframes p2{0%,22%{opacity:.55}27%,40%{opacity:1}45%,100%{opacity:.55}}
+@keyframes p3{0%,52%{opacity:.55}57%,70%{opacity:1}75%,100%{opacity:.55}}
+.cur{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+</style>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eff6ff"/><stop offset="1" stop-color="#dbeafe"/></linearGradient></defs>
+<rect width="900" height="480" rx="16" fill="url(#bg)"/>
+<text x="450" y="52" text-anchor="middle" class="t">Regex <tspan fill="#0d9488">Converter</tspan><tspan class="cur" fill="#3b82f6">|</tspan></text>
+<text x="40" y="92" class="h">input</text>
+<text x="470" y="92" class="h2">output</text>
+<rect x="40" y="102" width="390" height="120" rx="12" fill="#fff" stroke="#e4e4e7"/>
+<rect x="470" y="102" width="390" height="120" rx="12" fill="#fff" stroke="#e4e4e7"/>
+<g><text x="58" y="142" class="m">Regex rules are neat right.</text><text x="58" y="168" class="m">Paste text. Add rules.</text></g>
+<g class="o1"><text x="488" y="142" class="m">Regex rules are neat right🐱</text><text x="488" y="168" class="m">Paste text🐱 Add rules🐱</text></g>
+<g class="o2"><text x="488" y="142" class="m">Regex rules are neat 🐱</text><text x="488" y="168" class="m">Paste text🐱 Add rules🐱</text></g>
+<g class="o3"><text x="488" y="142" class="m">- Regex rules are neat 🐱</text><text x="488" y="168" class="m">- Paste text🐱 - Add rules🐱</text></g>
+<text x="40" y="256" class="h">rules</text>
+
+<g>
+<rect x="40" y="268" width="820" height="52" rx="12" fill="#fff" stroke="#e4e4e7"/>
+<g transform="translate(60,282)"><rect class="sw s1" width="44" height="24" rx="12"/><circle cx="32" cy="12" r="9" fill="#fff"/></g>
+<rect x="130" y="277" width="320" height="34" rx="8" fill="#fafafa" stroke="#d4d4d8"/>
+<text x="144" y="299" class="m">\.</text>
+<text x="470" y="300" class="m" fill="#a1a1aa">→</text>
+<rect x="500" y="277" width="300" height="34" rx="8" fill="#fafafa" stroke="#d4d4d8"/>
+<text x="514" y="299" class="m">🐱</text>
+<text x="822" y="301" font-size="20" fill="#dc2626" text-anchor="middle">×</text>
+</g>
+
+<g class="r2">
+<rect x="40" y="332" width="820" height="52" rx="12" fill="#fff" stroke="#e4e4e7"/>
+<g transform="translate(60,346)"><rect class="sw s2" width="44" height="24" rx="12"/><circle class="kn s2k" cx="12" cy="12" r="9" fill="#fff"/></g>
+<rect x="130" y="341" width="320" height="34" rx="8" fill="#fafafa" stroke="#d4d4d8"/>
+<text x="144" y="363" class="m">right</text>
+<text x="470" y="364" class="m" fill="#a1a1aa">→</text>
+<rect x="500" y="341" width="300" height="34" rx="8" fill="#fafafa" stroke="#d4d4d8"/>
+<text x="514" y="363" class="m" fill="#a1a1aa">(nothing)</text>
+<text x="822" y="365" font-size="20" fill="#dc2626" text-anchor="middle">×</text>
+</g>
+
+<g class="r3">
+<rect x="40" y="396" width="820" height="52" rx="12" fill="#fff" stroke="#e4e4e7"/>
+<g transform="translate(60,410)"><rect class="sw s3" width="44" height="24" rx="12"/><circle class="kn s3k" cx="12" cy="12" r="9" fill="#fff"/></g>
+<rect x="130" y="405" width="320" height="34" rx="8" fill="#fafafa" stroke="#d4d4d8"/>
+<text x="144" y="427" class="m">([A-Z])</text>
+<text x="470" y="428" class="m" fill="#a1a1aa">→</text>
+<rect x="500" y="405" width="300" height="34" rx="8" fill="#fafafa" stroke="#d4d4d8"/>
+<text x="514" y="427" class="m">- $1</text>
+<text x="822" y="429" font-size="20" fill="#dc2626" text-anchor="middle">×</text>
+</g>
+</svg>
