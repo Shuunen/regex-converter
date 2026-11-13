@@ -1,6 +1,7 @@
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vitest/config'
+import { cspNonce } from './src/plugins/csp-nonce.ts'
 import { uniqueMark } from './src/plugins/unique-mark.ts'
 
 // oxlint-disable-next-line import/no-default-export
@@ -16,7 +17,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), tailwindcss(), uniqueMark()],
+  plugins: [react(), tailwindcss(), uniqueMark(), cspNonce()],
   // dedicated ports, so apps never collide when running together
   preview: { port: 4108, strictPort: true },
   server: { port: 5108, strictPort: true },

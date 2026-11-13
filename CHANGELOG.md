@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+
+- The page was blank because the content security policy blocked the app script, the script now gets the nonce the policy asks for
+
 ## [0.2.1] - 2026-11-13
 
 ### Changed
