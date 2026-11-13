@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- Dropped the redundant `run_install` option from the CI
+
 ## [0.2.0] - 2026-06-15
 
 ### Changed
