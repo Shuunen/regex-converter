@@ -76,5 +76,5 @@
     "up:deps": "pnpm update --recursive --latest && echo up:deps completed successfully"
   },
   "type": "module",
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
