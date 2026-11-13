@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The page was blank because the content security policy blocked the app script, the script now gets the nonce the policy asks for
+- Link the web app manifest from the page so the app can be installed
+
+### Added
+
+- Serve a `robots.txt` that lets crawlers index the site
+
+### Changed
+
+- Add the repo-check schema to its config
+- Drop the redundant `onlyBuiltDependencies` from the pnpm workspace
 
 ## [0.2.1] - 2026-11-13
 
