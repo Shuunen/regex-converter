@@ -1,10 +1,10 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#064943",
   "display": "standalone",
   "name": "regex-converter",
   "short_name": "regex-converter",
   "start_url": "/",
-  "theme_color": "#ffffff",
+  "theme_color": "#0d9488",
   "icons": [
     {
       "src": "pwa-64x64.png",

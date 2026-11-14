@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 
 - Add the repo-check schema to its config
 - Drop the redundant `onlyBuiltDependencies` from the pnpm workspace
+- Align the web manifest colors and the VS Code window colors on the theme color
 
 ## [0.2.1] - 2026-11-13
 
