@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 
 - Serve a `robots.txt` that lets crawlers index the site
 - App icons (favicon, apple touch icon, 64, 192 and 512 pixel icons and a maskable one) listed in the web app manifest, so the app can be installed
+- Add a description and a theme color to the page
 
 ### Changed
 
