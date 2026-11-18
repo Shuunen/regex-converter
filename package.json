@@ -54,6 +54,7 @@
   },
   "scripts": {
     "build": "turbo run build:tsc build:vite && echo build completed successfully || (echo Please fix build errors and run pnpm run build to check for remaining build issues && exit 1)",
+    "build:assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg && echo build:assets completed successfully",
     "build:tsc": "tsc -b && echo build:tsc completed successfully || (echo Please fix type errors and run pnpm run build:tsc to check for remaining type issues && exit 1)",
     "build:vite": "vite build && echo build:vite completed successfully || (echo Please fix build errors and run pnpm run build:vite to check for remaining build issues && exit 1)",
     "check": "turbo run --output-logs=errors-only lint:install lint:types lint:knip lint:format lint:issues lint:md build:tsc build:vite test:unit lint:repo && echo check completed successfully",
@@ -69,7 +70,6 @@
     "lint:repo": "repo-check && echo lint:repo completed successfully",
     "lint:types": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && echo lint:types completed successfully || (echo Please fix type errors and run pnpm run lint:types to check for remaining type issues && exit 1)",
     "preview": "vite preview",
-    "pwa:assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg",
     "test": "turbo run test:unit && echo test completed successfully",
     "test:ui": "vitest --ui",
     "test:unit": "vitest run --coverage && echo test:unit completed successfully || (echo Please fix test errors and run pnpm run test:unit to check for remaining test issues && exit 1)",

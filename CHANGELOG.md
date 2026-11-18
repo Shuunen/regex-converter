@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+- Make the app icons from `public/logo.svg` with `build:assets`, full-bleed in the theme color, and list them in the web manifest with absolute paths
 - Add the repo-check schema to its config
 - Drop the redundant `onlyBuiltDependencies` from the pnpm workspace
 - Align the web manifest colors and the VS Code window colors on the theme color

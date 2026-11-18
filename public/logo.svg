@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#2b6cb0"/><text x="256" y="256" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="320" font-weight="700" text-anchor="middle" dominant-baseline="central">R</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="112" fill="#0d9488"/>
+  <g stroke="#064943" stroke-opacity="0.4" stroke-width="38" stroke-linecap="round" stroke-linejoin="round" transform="translate(12 14)">
+    <path d="M118 392 L168 120" stroke-opacity="0.2"/>
+    <path d="M344 392 L394 120"/>
+    <path d="M200 256 H306 M268 214 L310 256 L268 298"/>
+  </g>
+  <g stroke-width="38" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 392 L168 120" stroke="#fff" stroke-opacity="0.5"/>
+    <path d="M344 392 L394 120" stroke="#fbbf24"/>
+    <path d="M200 256 H306 M268 214 L310 256 L268 298" stroke="#fff"/>
+  </g>
+</svg>
